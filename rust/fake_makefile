@@ -1,0 +1,4 @@
+build:
+	docker build -f docker/Dockerfile -t [REGION]-docker.pkg.dev/[PROJECT_ID]/[REPOSITORY_NAME]/[IMAGE]:[TAG] .
+push:
+	docker push [REGION]-docker.pkg.dev/[PROJECT_ID]/[REPOSITORY_NAME]/[IMAGE]:[TAG]
