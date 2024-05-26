@@ -1,6 +1,6 @@
 provider "google" {
-  project = ""
-  region  = ""
-  zone    = ""
+  project = local.project
+  region  = local.region
+  zone    = local.zone
 }
 
