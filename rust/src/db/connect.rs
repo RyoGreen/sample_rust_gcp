@@ -1,4 +1,4 @@
-use crate::config::DatabaseConfig;
+use crate::config::config::DatabaseConfig;
 use tokio_postgres::{Client, Error, NoTls};
 
 pub async fn connect(db_config: &DatabaseConfig) -> Result<Client, Error> {
