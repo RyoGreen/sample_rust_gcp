@@ -3,11 +3,11 @@ use crate::db;
 use actix_web::{web, App, HttpServer};
 use std::sync::{Arc, Mutex};
 
-use crate::handler::route_not_found;
 use crate::handler::route;
+use crate::handler::route_not_found;
 
 pub async fn run(cfg: config::config::Config) -> Result<(), Box<dyn std::error::Error>> {
-    let port = cfg.database.port;
+    let port = cfg.http.port;
     println!("Server started at http://localhost:{}", port);
     let client = db::connect::connect(&cfg.database).await;
 
